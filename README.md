@@ -15,13 +15,13 @@ The questions at the outset of this project are:
 
 **Are Airbnbs priced differently depending on what area they are in?**
 
-This is a simple, descriptive question that can be addressed by simply examining the medians and standard deviations of Airbnb pricing in a certain area. Here, price is the mean price over the period June 2019 to June 2020 per included guest and excluding additional fees such as cleaning fees. Medians are preferred over means in this context as the pricing data is heavily right skewed due to a number of luxury properties. 
+This is a simple, descriptive question that can be addressed by simply examining the means and spreads of Airbnb pricing in a certain area. Here, price is the mean price over the period June 2019 to June 2020 per included guest and excluding additional fees such as cleaning fees. The boxplot makes evident that there are a number of luxury properties in most areas.
 
 ![](../master/eda/neighbourhood_pricepig_boxplot.png)
 
-The three cheapest areas to stay are Leith, Haymarket, and Bruntsfield. This is also true of the 2020-21 data. New Town is the most expensive location for Airbnbs in both this and the following years' data. The difference between the median prices in Haymarket compared to New Town is £20.
+The three cheapest areas to stay are Leith, Haymarket, and Bruntsfield. This is also true of the 2020-21 data. New Town is the most expensive location for Airbnbs in both this and the following years' data. I also made interactive choropleth's for viewing pricing of Edinburgh Airbnbs - the interactive version can be found in `eda/mapvis.ipynb`. 
 
-To come: geographical plot...
+![](../master/eda/price_choropleth.png)
 
 **Has the number of Airbnbs in Edinburgh, their price, or availability changed post-Covid compared to pre-Covid?**
 
