@@ -21,7 +21,7 @@ This is a simple, descriptive question that can be addressed by simply examining
 
 The three cheapest areas to stay are Leith, Haymarket, and Bruntsfield. This is also true of the 2020-21 data. New Town is the most expensive location for Airbnbs in both this and the following years' data. I also made interactive choropleth's for viewing pricing of Edinburgh Airbnbs - the interactive version can be found in `eda/mapvis.ipynb`. 
 
-![](../master/eda/price_choropleth.png)
+![](../master/eda/price_choropleth.PNG)
 
 **Has the number of Airbnbs in Edinburgh, their price, or availability changed post-Covid compared to pre-Covid?**
 
