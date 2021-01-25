@@ -8,7 +8,7 @@ The aim of this project is to use InsideAirbnb's datasets on Edinburgh Airbnbs 2
 
 The questions at the outset of this project are:
 - Are Airbnbs priced differently depending on what area they are in?
-- Has the number of Airbnbs in Edinburgh, their price, or availability changed post-Covid compared to pre-Covid?
+- Has the number of Airbnbs in Edinburgh or their price changed post-Covid compared to pre-Covid?
 - How well can Edinburgh Airbnb prices be predicted from InsideAirbnb's data alone?
 
 ## Results
@@ -23,7 +23,7 @@ The three cheapest areas to stay are Leith, Haymarket, and Bruntsfield. This is 
 
 ![](../master/eda/price_choropleth.PNG)
 
-**Has the number of Airbnbs in Edinburgh, their price, or availability changed post-Covid compared to pre-Covid?**
+**Has the number of Airbnbs in Edinburgh or their price changed post-Covid compared to pre-Covid?**
 
 The Airbnb data show clear seasonality with spikes in price around August and the end of December. These spikes coincide with some of Edinburgh's biggest events: the Edinburgh Fringe Festival in August and the Christmas Markets and Hogmanay street party at the end of December. 
 
@@ -35,12 +35,11 @@ There are also weekly fluctuations: Friday and Saturday nights are more expensiv
 
 When the data for the 2020-21 period were collected, in July of 2020, Airbnb owners would have been well aware of the COVID-19 pandemic and its impact on travel and events. In fact, the Edinburgh Fringe Festival was cancelled on the 1st April 2020, before these data were collected. So did Edinburgh Airbnb owners drop their prices to reflect the decrease in demand for their properties during this time?
 
-[graph to come]
+![](../master/eda/year_price_comparison.png)
 
-Visually, it seems clear that prices were not amended...
+There is still a spike in Airbnb pricing during the period when the Fringe festival would have been. However, the magnitude of this spike is less than the previous year. The data available through InsideAirbnb cannot be used to investigate changes in bookings, because Airbnb does not differentiate between a let that has been booked and a let that has been set as unavailable by the property owner. Some owners, for example, will only let their property out during a specific time of year. 
 
-Perhaps Airbnb owners took their properties off of the holiday letting site and made them into regular rentals...
-
+Perhaps Airbnb owners took their properties off of the holiday letting site and made them into regular rentals? The number of Airbnb's in the 2019-20 dataset was 13,245 and in the 2020-21 it was modestly less: 12,658. Of the Airbnbs listed in the 2019-20 dataset, 8,126 (~61%) of their IDs were also found in the 2020-21 dataset. There could conceivably be even more relisted under different IDs. However, without other years for context there is little that we can learn from these numbers. 
 
 **How well can Edinburgh Airbnb prices be predicted from InsideAirbnb's data alone?**
 
