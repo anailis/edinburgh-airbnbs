@@ -2,8 +2,6 @@
 
 ## Introduction
 
-**This is a work in progress.**
-
 The aim of this project is to use InsideAirbnb's datasets on Edinburgh Airbnbs 2019 - 2021 to answer a range of questions. At the end of the project, recommendations will be made about how it could be followed up.
 
 The questions at the outset of this project are:
@@ -43,4 +41,17 @@ Perhaps Airbnb owners took their properties off of the holiday letting site and 
 
 **How well can Edinburgh Airbnb prices be predicted from InsideAirbnb's data alone?**
 
+Principal components analysis (PCA) was used to reduce the dimensionality of review data, and multiple correspondance analysis (MCA) was used to reduce the dimensionality of amenity variables. Data were modelled with a multivariate regression and XGBoost in an attempt to predict prices from the other available data. The regression performed marginally better on test data (r^2 = 0.15) compared to XGBoost (r^2 = 0.12). Overall though, there is not a great amount of predictive power contained only within the InsideAirbnb dataset. 
+
 ## Conclusions & Recommendations 
+
+To better model Airbnb pricing in Edinburgh, I would recommend the incorporation of additional datasets. The InsideAirbnb data gives co-ordinates of Airbnb locations which will allow integration with spatial datasets. These could include, but are not limited to:
+- Number and proximity of surrounding amentities (bars, restaurants, etc.) 
+- Distance from key landmarks (Royal Mile, Grassmarket etc.)
+- Average rent of surrounding properties with a certain radius 
+
+There is also scope to create time series models given the seasonality of Edinburgh Airbnb pricing. 
+
+To further investigate differences in Airbnb pricing from area to area, prices of Airbnbs could have been corrected for other features other than just the number of guests. However, few other features should strong correlations (> |0.1|) with price so it was unclear how to make properties comparable. I was somewhat surprised about how minor the differences were between centrally located neighbourhoods and those further afield. Perhaps text analysis of property descriptions and reviews could reveal more details about properties. Additionally, the aforementioned integration with spatial datasets may also provide more insights. General neighbourhood may be less important than proximity to a particular landmark, such as Edinburgh Castle.
+
+Finally, the spike in Airbnb pricing at peak tourist times in 2020, despite owners knowing about the cancellation of festivals, is an interesting finding. This could be down to inertia on the owner's part, or reliance on Airbnb's Smart Pricing feature, which automatically sets property prices based on expected demand. 
